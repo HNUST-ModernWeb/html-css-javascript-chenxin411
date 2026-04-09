@@ -1,4 +1,4 @@
-/* 全局样式重置，统一默认样式 */
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +23,9 @@ h1 {
     font-size: 2rem;
 }
 
-/* 卡片容器：核心样式（居中、阴影、圆角） */
+/* 卡片容器：核心样式 */
 .card {
     background-color: white;
-    width: 400px;
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -36,7 +35,7 @@ h1 {
     transition: transform 0.3s ease; /* 动画：hover上浮 */
 }
 
-/* 卡片hover效果（创新加分） */
+/* 卡片hover效果 */
 .card:hover {
     transform: translateY(-5px);
 }
@@ -58,7 +57,7 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-/* 头像hover放大（创新加分） */
+/* 头像hover放大  */
 #avatar:hover {
     transform: scale(1.05);
 }
@@ -75,7 +74,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-/* 按钮hover效果（评分要求） */
+/* 按钮hover效果  */
 button:hover {
     background-color: #66b1ff;
 }
@@ -114,7 +113,7 @@ button:hover {
     resize: vertical;
 }
 
-/* 保存按钮样式（突出显示） */
+/* 保存按钮样式 */
 #save-btn {
     padding: 0.8rem;
     font-size: 1rem;
@@ -169,7 +168,7 @@ body.dark .info-item label {
 .card.white {
   background-color: #ffffff;
 }
-/* 可爱小动画 */
+
 .card {
   animation: fadeIn 0.6s ease forwards;
   transition: all 0.3s ease;
@@ -197,7 +196,7 @@ body.dark .info-item label {
 button:active {
   transform: scale(0.96);
 }
-/* 可爱心跳 + 粉色系动画 */
+
 @keyframes heartbeat {
   0% { transform: scale(1); }
   15% { transform: scale(1.08); }
@@ -207,7 +206,6 @@ button:active {
   100% { transform: scale(1); }
 }
 
-/* 卡片加载心跳动画 */
 .card {
   animation: fadeIn 0.6s ease;
   transition: all 0.3s ease;
@@ -215,7 +213,6 @@ button:active {
   overflow: visible;
 }
 
-/* 悬浮放大更软萌 */
 .card:hover {
   transform: scale(1.03);
 }
@@ -237,7 +234,7 @@ button:active {
   }
 }
 
-/* 右上角小爱心 */
+/* 右上角 */
 .card::before {
   content: 'U•ェ•U';
   position: absolute;
