@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息卡片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="theme-btn">切换深色/浅色</button>
+<h1>个人信息卡片</h1>
+<!-- 换卡片颜色 -->
+<div style="margin-bottom:15px;">
+    <button id="colorPink">粉色</button>
+    <button id="colorYellow">黄色</button>
+    <button id="colorBlue">蓝色</button>
+    <button id="colorWhite">白色</button>
+</div>
+
+<div class="card">
+    <div class="avatar-container">
+        <img id="avatar" src="https://via.placeholder.com/100" alt="头像">
+        <input type="file" id="avatar-upload" accept="image/*" hidden>
+        <button id="change-avatar-btn">更换头像</button>
+    </div>
+
+    <div class="info-item">
+        <label>姓名：</label>
+        <span id="name-display">请输入姓名</span>
+        <input type="text" id="name-input" hidden>
+        <button id="edit-name-btn">编辑</button>
+    </div>
+
+    <div class="info-item">
+        <label>简介：</label>
+        <p id="bio-display">请输入简介</p>
+        <textarea id="bio-input" hidden></textarea>
+        <button id="edit-bio-btn">编辑</button>
+    </div>
+    <button id="save-btn">保存</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

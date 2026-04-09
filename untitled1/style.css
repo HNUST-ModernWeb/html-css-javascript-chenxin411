@@ -1,0 +1,254 @@
+/* 全局样式重置，统一默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 页面背景 */
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* 页面标题 */
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* 卡片容器：核心样式（居中、阴影、圆角） */
+.card {
+    background-color: white;
+    width: 400px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease; /* 动画：hover上浮 */
+}
+
+/* 卡片hover效果（创新加分） */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 头像容器 */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* 圆形头像样式 */
+#avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 头像hover放大（创新加分） */
+#avatar:hover {
+    transform: scale(1.05);
+}
+
+/* 按钮通用样式 */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFD700;
+    color: White;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+/* 按钮hover效果（评分要求） */
+button:hover {
+    background-color: #66b1ff;
+}
+
+/* 信息项样式 */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.info-item label {
+    font-weight: bold;
+    color: #333;
+    min-width: 60px;
+}
+
+#name-display, #bio-display {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 输入框样式 */
+#name-input, #bio-input {
+    padding: 0.5rem;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+#bio-input {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* 保存按钮样式（突出显示） */
+#save-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #FFB26B;
+}
+
+#save-btn:hover {
+    background-color: #85ce61;
+}
+/* 深色主题皮肤 */
+body.dark {
+  background-color: #1a1a1a;
+}
+body.dark .card {
+  background-color: #2d2d2d;
+  color: #eee;
+}
+body.dark h1 {
+  color: #fff;
+}
+body.dark #name-display,
+body.dark #bio-display {
+  color: #ccc;
+}
+body.dark .info-item label {
+  color: #ffffff;
+}
+
+/* 换肤按钮样式 */
+#theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #409eff;
+  color: #fff;
+  cursor: pointer;
+}
+/* 卡片换色 */
+.card.pink {
+  background-color: #FFE6EE;
+}
+.card.yellow {
+  background-color: #FFF9CC;
+}
+.card.blue {
+  background-color: #E6F7FF;
+}
+.card.white {
+  background-color: #ffffff;
+}
+/* 可爱小动画 */
+.card {
+  animation: fadeIn 0.6s ease forwards;
+  transition: all 0.3s ease;
+}
+
+/* 进入时淡入弹一下 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 鼠标放上去轻轻弹大一点点 */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* 按钮按下去小反馈 */
+button:active {
+  transform: scale(0.96);
+}
+/* 可爱心跳 + 粉色系动画 */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.08); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+  60% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* 卡片加载心跳动画 */
+.card {
+  animation: fadeIn 0.6s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* 悬浮放大更软萌 */
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* 按钮点击小动画 */
+button:active {
+  transform: scale(0.95);
+}
+
+/* 淡入入场 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 右上角小爱心 */
+.card::before {
+  content: 'U•ェ•U';
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 22px;
+  color: #ffcc22;
+  animation: heartFloat 3s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
